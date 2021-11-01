@@ -1,0 +1,24 @@
+{
+    "name": "tremendo/oxid-hcaptcha",
+    "description": "hCaptcha module for OXID eShop",
+    "type": "oxideshop-module",
+    "version": "0.1",
+    "keywords": ["oxid", "modules", "hcaptcha"],
+    "license": ["MIT"],
+    "authors": [
+        {
+            "name": "Jan Loeper",
+            "email": "kalte_sterne@arcor.de"
+        }
+    ],
+    "extra": {
+      "oxideshop": {
+        "target-directory": "tremendo/hcaptcha"
+      }
+    },
+    "autoload": { 
+      "psr-4": {
+        "Tremendo\\Hcaptcha\\": "../../../source/modules/tremendo/hcaptcha"
+      }
+    }
+  }
