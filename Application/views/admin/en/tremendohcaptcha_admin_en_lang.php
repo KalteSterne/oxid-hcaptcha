@@ -7,5 +7,8 @@
 
       'SHOP_MODULE_GROUP_tremendo_hcaptcha_main' => 'Main',
       'SHOP_MODULE_tremendo_hcaptcha_secret' => 'Secret',
-      'SHOP_MODULE_tremendo_hcaptcha_sitekey' => 'Site Key'
+      'SHOP_MODULE_tremendo_hcaptcha_sitekey' => 'Site Key',
+      'SHOP_MODULE_tremendo_hcaptcha_darktheme' => 'Use dark theme for widget?',
+      'SHOP_MODULE_tremendo_hcaptcha_compact' => 'Use compact display mode?'
   ];
+  

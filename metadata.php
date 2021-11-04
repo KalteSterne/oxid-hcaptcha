@@ -75,6 +75,18 @@ $aModule = [
             'type' => 'str',
             'value' => '0x3135eEb7E987610441C36c8a5Ff858247A85b9f0'
         ],
+        [
+            'group' => 'tremendo_hcaptcha_main',
+            'name' => 'tremendo_hcaptcha_darktheme',
+            'type' => 'bool',
+            'value' => 'false'
+        ],
+        [
+            'group' => 'tremendo_hcaptcha_main',
+            'name' => 'tremendo_hcaptcha_compact',
+            'type' => 'bool',
+            'value' => 'false'
+        ],
     ],
     'events' => [
         'onActivate' => '\Tremendo\Hcaptcha\Core\Events::onActivate()',
