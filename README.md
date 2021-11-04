@@ -5,7 +5,7 @@
 Stop more bots. Start protecting user privacy. This module adds [hCaptcha](https://www.hcaptcha.com) to forms in OXID eShop.
 ##  Requirements
 - OXID >= 6
-- PHP >= 7.1
+- PHP >= 7.0
 
 ## Installation
 To install the module run the following command from the root directory of your OXID installation.
@@ -20,6 +20,8 @@ After installing the module, you need to activate it, either via OXID eShop admi
 ```
 ## Configuration
 Visit [hcaptcha.com](https://www.hcaptcha.com) and register for free. You will recieve a site key and a secret. Enter both in the modules's settings page. 
+### Content-Security-Policy Settings
+If you use CSP add ```https://hcaptcha.com``` and ```https://*.hcaptcha.com``` to ```script-src```, ```frame-src```, ```style-src``` and ```connect-src```.
 
 ## License
 This module is licensed under the [MIT License](./LICENSE).
