@@ -67,13 +67,13 @@ $aModule = [
             'group' => 'tremendo_hcaptcha_main',
             'name' => 'tremendo_hcaptcha_sitekey',
             'type' => 'str',
-            'value' => 'c493f8b2-0e19-4e14-a3d3-c4da0c44af3c'
+            'value' => ''
         ],
         [
             'group' => 'tremendo_hcaptcha_main',
             'name' => 'tremendo_hcaptcha_secret',
             'type' => 'str',
-            'value' => '0x3135eEb7E987610441C36c8a5Ff858247A85b9f0'
+            'value' => ''
         ],
         [
             'group' => 'tremendo_hcaptcha_main',
