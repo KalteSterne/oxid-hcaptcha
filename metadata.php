@@ -67,13 +67,13 @@ $aModule = [
             'group' => 'tremendo_hcaptcha_main',
             'name' => 'tremendo_hcaptcha_sitekey',
             'type' => 'str',
-            'value' => ''
+            'value' => 'c493f8b2-0e19-4e14-a3d3-c4da0c44af3c'
         ],
         [
             'group' => 'tremendo_hcaptcha_main',
             'name' => 'tremendo_hcaptcha_secret',
             'type' => 'str',
-            'value' => ''
+            'value' => '0x3135eEb7E987610441C36c8a5Ff858247A85b9f0'
         ],
         [
             'group' => 'tremendo_hcaptcha_main',
@@ -87,13 +87,6 @@ $aModule = [
             'type' => 'bool',
             'value' => 'false'
         ],
-        [
-            'group' => 'tremendo_hcaptcha_main',
-            'name' => 'tremendo_hcaptcha_callbacks',
-            'type' => 'select',
-            'value' => 'false',
-            'constraints' => 'success|open|close|error|response exipired|challenge expired'
-        ]
     ],
     'events' => [
         'onActivate' => '\Tremendo\Hcaptcha\Core\Events::onActivate()',
