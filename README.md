@@ -33,5 +33,5 @@ it to ```hcaptchta_callbacks.js``` so future updates of this module will not ove
 ## Content-Security-Policy Settings
 If you use CSP add ```https://hcaptcha.com``` and ```https://*.hcaptcha.com``` to ```script-src```, ```frame-src```, ```style-src``` and ```connect-src```.
 
-## License
+# License
 This module is licensed under the [MIT License](./LICENSE.md).
