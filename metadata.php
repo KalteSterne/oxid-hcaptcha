@@ -18,12 +18,6 @@ $aModule = [
     'author'       => 'Jan Loeper',
     'email'        => 'kalte_sterne@arcor.de',
     'url'          => 'https://github.com/KalteSterne/oxid-hcaptcha',
-    'controllers'  => [
-
-    ],
-    'templates' => [
-        
-    ],
     'blocks' => [
         [
             'template' => 'layout/base.tpl',
@@ -56,11 +50,7 @@ $aModule = [
         \OxidEsales\Eshop\Application\Controller\ContactController::class => \Tremendo\Hcaptcha\Controller\ContactController::class,
         \OxidEsales\Eshop\Application\Controller\NewsletterController::class => \Tremendo\Hcaptcha\Controller\NewsletterController::class,
         \OxidEsales\Eshop\Application\Component\UserComponent::class => \Tremendo\Hcaptcha\Component\UserComponent::class,
-        \OxidEsales\Eshop\Application\Controller\SuggestController::class => \Tremendo\Hcaptcha\Controller\SuggestController::class,
-
-    ],
-    'smartyPluginDirectories' => [
-        
+        \OxidEsales\Eshop\Application\Controller\SuggestController::class => \Tremendo\Hcaptcha\Controller\SuggestController::class
     ],
     'settings' => [
         [
@@ -76,14 +66,50 @@ $aModule = [
             'value' => ''
         ],
         [
-            'group' => 'tremendo_hcaptcha_main',
+            'group' => 'tremendo_hcaptcha_appearance',
             'name' => 'tremendo_hcaptcha_darktheme',
             'type' => 'bool',
             'value' => 'false'
         ],
         [
-            'group' => 'tremendo_hcaptcha_main',
+            'group' => 'tremendo_hcaptcha_appearance',
             'name' => 'tremendo_hcaptcha_compact',
+            'type' => 'bool',
+            'value' => 'false'
+        ],
+        [
+            'group' => 'tremendo_hcaptcha_callbacks',
+            'name' => 'tremendo_hcaptcha_callback_success',
+            'type' => 'bool',
+            'value' => 'false'
+        ],
+        [
+            'group' => 'tremendo_hcaptcha_callbacks',
+            'name' => 'tremendo_hcaptcha_callback_error',
+            'type' => 'bool',
+            'value' => 'false'
+        ],
+        [
+            'group' => 'tremendo_hcaptcha_callbacks',
+            'name' => 'tremendo_hcaptcha_callback_open',
+            'type' => 'bool',
+            'value' => 'false'
+        ],
+        [
+            'group' => 'tremendo_hcaptcha_callbacks',
+            'name' => 'tremendo_hcaptcha_callback_close',
+            'type' => 'bool',
+            'value' => 'false'
+        ],
+        [
+            'group' => 'tremendo_hcaptcha_callbacks',
+            'name' => 'tremendo_hcaptcha_callback_responseexpired',
+            'type' => 'bool',
+            'value' => 'false'
+        ],
+        [
+            'group' => 'tremendo_hcaptcha_callbacks',
+            'name' => 'tremendo_hcaptcha_callback_challengeexpired',
             'type' => 'bool',
             'value' => 'false'
         ],
@@ -91,5 +117,11 @@ $aModule = [
     'events' => [
         'onActivate' => '\Tremendo\Hcaptcha\Core\Events::onActivate()',
         'onDeactivate' => '\Tremendo\Hcaptcha\Core\Events::onDeactivate()' 
+    ],
+    'controllers'  => [
+
+    ],
+    'templates' => [
+        
     ]
 ];
