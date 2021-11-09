@@ -5,8 +5,8 @@
 [{if $ac == "contact" || $ac == "newsletter" || $ac=="register" || $ac=="suggest"}]
     <script src="[{ $oViewConf->getModuleUrl('tremendo_hcaptcha','out/src/js/hcaptcha_callbacks.js') }]"></script>
     [{capture assign=tremendohcaptchaonload}]
-        var tremendoHcaptcha_onload = function () {
-            var tremendoHcaptcha_widget = hcaptcha.render('tremendo-hcaptcha', { 
+        var tremendoHcaptchaonload = function () {
+            var tremendoHcaptchawidget = hcaptcha.render('tremendo-hcaptcha', { 
                 sitekey: '[{$oConf->getConfigParam('tremendo_hcaptcha_sitekey')}]',
                 theme: [{if $oConf->getConfigParam('tremendo_hcaptcha_darktheme')}]'dark'[{else}]'light'[{/if}],
                 size: [{if $oConf->getConfigParam('tremendo_hcaptcha_compact')}]'compact'[{else}]'normal'[{/if}],
@@ -34,5 +34,5 @@
     <script>
         [{$tremendohcaptchaonload}]
     </script>
-    <script src="https://js.hcaptcha.com/1/api.js?onload=tremendoHcaptcha_onload&render=explicit" async defer></script>
+    <script src="https://js.hcaptcha.com/1/api.js?onload=tremendoHcaptchaonload&render=explicit" async defer></script>
 [{/if}]
