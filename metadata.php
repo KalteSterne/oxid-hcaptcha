@@ -22,29 +22,32 @@ $aModule = [
         [
             'template' => 'layout/base.tpl',
             'block' => 'base_js', 
-            'file' => 'hcaptcha_base_js.tpl', 
+            'file' => 'Application/views/blocks/hcaptcha_base_js.tpl', 
             'position' => '7'
         ],
         [
             'template' => 'form/contact.tpl',
             'block' => 'captcha_form',
-            'file' => 'contact_form_captcha.tpl'
+            'file' => 'Application/views/blocks/contact_form_captcha.tpl'
         ],
         [
             'template' => 'form/newsletter.tpl',
             'block' => 'newsletter_form_button',
-            'file' => 'newsletter_form_captcha.tpl'
+            'file' => 'Application/views/blocks/newsletter_form_captcha.tpl'
         ],
         [
             'template' => 'form/fieldset/user_billing.tpl',
             'block' => 'form_user_billing_country',
-            'file' => 'register_form_captcha.tpl'
+            'file' => 'Application/views/blocks/register_form_captcha.tpl'
         ],
         [
             'template' => 'form/suggest.tpl',
             'block' => 'captcha_form',
-            'file' => 'suggest_form_captcha.tpl'
+            'file' => 'Application/views/blocks/suggest_form_captcha.tpl'
         ]
+    ],
+    'templates' => [
+        'tremendohcaptcha/captcha.tpl' => 'tremendo/hcaptcha/Application/views/tpl/captcha.tpl' 
     ],
     'extend' => [
         \OxidEsales\Eshop\Application\Controller\ContactController::class => \Tremendo\Hcaptcha\Controller\ContactController::class,
@@ -120,8 +123,5 @@ $aModule = [
     ],
     'controllers'  => [
 
-    ],
-    'templates' => [
-        
     ]
 ];
