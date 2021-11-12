@@ -3,7 +3,7 @@
 [{assign var="ac" value=$oViewConf->getTopActiveClassName()}]
 
 [{if $ac == "contact" || $ac == "newsletter" || $ac=="register" || $ac=="suggest"}]
-    <script src="[{ $oViewConf->getModuleUrl('tremendo_hcaptcha','out/src/js/hcaptcha_callbacks.js') }]"></script>
+    [{oxscript include=$oViewConf->getModuleUrl('tremendo_hcaptcha','out/src/js/hcaptcha_callbacks.js') }]
     [{capture assign=tremendohcaptchaonload}]
         var tremendoHcaptchaonload = function () {
             var tremendoHcaptchawidget = hcaptcha.render('tremendo-hcaptcha', { 

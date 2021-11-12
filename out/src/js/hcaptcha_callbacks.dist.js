@@ -12,7 +12,7 @@
  *  See http://www.opensource.org/licenses/MIT for details.                    *
  */
 
-var tremendoHcaptcha = (function () {
+var tremendoHcaptcha = (function ($) {
 
     /*
     put your private helper function and data here
@@ -34,7 +34,7 @@ var tremendoHcaptcha = (function () {
         },
 
         onOpen: function() {
-            alert("test");
+            
         },
 
         onClose: function() {
@@ -51,4 +51,4 @@ var tremendoHcaptcha = (function () {
 
     };
 
-})();
+})(jQuery);
