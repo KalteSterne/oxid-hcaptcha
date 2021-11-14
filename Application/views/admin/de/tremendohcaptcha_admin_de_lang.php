@@ -8,6 +8,8 @@
       'SHOP_MODULE_GROUP_tremendo_hcaptcha_main' => 'Allgemein',
       'SHOP_MODULE_tremendo_hcaptcha_secret' => 'Secret',
       'SHOP_MODULE_tremendo_hcaptcha_sitekey' => 'Site Key',
+      'SHOP_MODULE_tremendo_hcaptcha_locale' => 'Sprache (leer für automatische Erkennung)',
+      'SHOP_MODULE_tremendo_hcaptcha_recaptchacompat' => 'google recaptcha Kompatibilitätsmodus',
       'SHOP_MODULE_GROUP_tremendo_hcaptcha_appearance' => 'Darstellung',
       'SHOP_MODULE_tremendo_hcaptcha_darktheme' => 'Dunkles Theme für das Widget verwenden?',
       'SHOP_MODULE_tremendo_hcaptcha_compact' => 'Kompakte Darstellung verwenden?',

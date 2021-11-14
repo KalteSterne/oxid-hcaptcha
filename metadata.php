@@ -69,6 +69,18 @@ $aModule = [
             'value' => ''
         ],
         [
+            'group' => 'tremendo_hcaptcha_main',
+            'name' => 'tremendo_hcaptcha_locale',
+            'type' => 'str',
+            'value' => ''
+        ],
+        [
+            'group' => 'tremendo_hcaptcha_main',
+            'name' => 'tremendo_hcaptcha_recaptchacompat',
+            'type' => 'bool',
+            'value' => 'true'
+        ],
+        [
             'group' => 'tremendo_hcaptcha_appearance',
             'name' => 'tremendo_hcaptcha_darktheme',
             'type' => 'bool',
