@@ -82,15 +82,17 @@ $aModule = [
         ],
         [
             'group' => 'tremendo_hcaptcha_appearance',
-            'name' => 'tremendo_hcaptcha_darktheme',
-            'type' => 'bool',
-            'value' => 'false'
+            'name' => 'tremendo_hcaptcha_theme',
+            'type' => 'select',
+            'value' => 'light',
+            'constraints' => 'light|dark'
         ],
         [
             'group' => 'tremendo_hcaptcha_appearance',
-            'name' => 'tremendo_hcaptcha_compact',
-            'type' => 'bool',
-            'value' => 'false'
+            'name' => 'tremendo_hcaptcha_size',
+            'type' => 'select',
+            'value' => 'normal',
+            'constraints' => 'normal|compact|invisible'
         ],
         [
             'group' => 'tremendo_hcaptcha_callbacks',

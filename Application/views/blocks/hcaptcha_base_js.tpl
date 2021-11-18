@@ -6,10 +6,10 @@
     [{oxscript include=$oViewConf->getModuleUrl('tremendo_hcaptcha','out/src/js/hcaptcha_callbacks.js') }]
     [{capture assign=tremendohcaptcha_onload}]
         var tremendoHcaptchaonload = function () {
-            var tremendoHcaptchawidget = hcaptcha.render('tremendo-hcaptcha', { 
+            var tremendoHcaptchawidget = hcaptcha.render('tremendo_hcaptcha', { 
                 sitekey: '[{$oConf->getConfigParam('tremendo_hcaptcha_sitekey')}]',
-                theme: [{if $oConf->getConfigParam('tremendo_hcaptcha_darktheme')}]'dark'[{else}]'light'[{/if}],
-                size: [{if $oConf->getConfigParam('tremendo_hcaptcha_compact')}]'compact'[{else}]'normal'[{/if}],
+                theme: '[{$oConf->getConfigParam('tremendo_hcaptcha_theme')|default:'light'}]',
+                size: '[{$oConf->getConfigParam('tremendo_hcaptcha_size')|default:'normal'}]',
                 [{if $oConf->getConfigParam('tremendo_hcaptcha_callback_success')}]
                     'callback': function() {tremendoHcaptcha.onSuccess()}
                 [{/if}]
@@ -29,6 +29,15 @@
                     'chalexpired-callback': function() {tremendoHcaptcha.onChallengeExpired()}
                 [{/if}]
             });
+
+            var submit = $('#tremendo_hcaptcha').closest('form').find('button');
+
+            submit.on('click', function(event) {
+                event.preventDefault();
+                alert('test');
+                hcaptcha.execute(tremendo_hcaptcha);
+            });
+           
         };
     [{/capture}]
     <script>

@@ -18,12 +18,12 @@ var tremendoHcaptcha = (function ($) {
     put your private helper function and data here
     */
 
-    /*
-    public methods
-    change their contents to your needs and don't forget to activate the
-    callbacks in the module's settings 
-    */
     return {
+        /*
+        public methods
+        change their contents to your needs and don't forget to activate the
+        callbacks in the module's settings 
+        */
 
         onSuccess: function() {
 
@@ -48,7 +48,6 @@ var tremendoHcaptcha = (function ($) {
         onChallengeexpired: function() {
 
         }
-
     };
 
 })(jQuery);
