@@ -30,13 +30,14 @@
                 [{/if}]
             });
 
-            var submit = $('#tremendo_hcaptcha').closest('form').find('button');
+            [{if $oConf->getConfigParam('tremendo_hcaptcha_size') == 'invisible'}]
+                var submit = $('#tremendo_hcaptcha').closest('form').find('button');
 
-            submit.on('click', function(event) {
-                event.preventDefault();
-                alert('test');
-                hcaptcha.execute(tremendo_hcaptcha);
-            });
+                submit.on('click', function(event) {
+                    event.preventDefault();
+                    hcaptcha.execute(tremendo_hcaptcha);
+                });
+            [{/if}]
            
         };
     [{/capture}]
