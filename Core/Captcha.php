@@ -15,51 +15,50 @@
 
 namespace Tremendo\Hcaptcha\Core;
 
+use GuzzleHttp\Client;
 use OxidEsales\Eshop\Core\Registry;
 
 class Captcha {
 
     private $data;
-
     private static $logger;
 
     public function __construct() {
-        self::$logger = ModuleLogger::getLogger();
+        self::$logger = ModuleLogger::getLogger('tremendo-hcaptcha.log');
 
-        if(
-            Registry::getConfig()->getConfigParam('tremendo_hcaptcha_secret') &&
-            Registry::getConfig()->getRequestParameter('h-captcha-response')
-        ) {
-            $this->data = [
-                'secret' => Registry::getConfig()->getConfigParam('tremendo_hcaptcha_secret'),
-                'response' => Registry::getConfig()->getRequestParameter('h-captcha-response')
-            ];
-        }
-        else {
-            self::$logger->error("Could not load configuration");
-        }
-            
+        $this->data = [
+            'secret' => Registry::getConfig()->getConfigParam('tremendo_hcaptcha_secret'),
+            'response' => Registry::getConfig()->getRequestParameter('h-captcha-response')
+        ];  
     }
 
     public function isValid():bool {
+        $client = new Client([
+            'base_uri' => 'https://hcaptcha.com',
+        ]);
+          
+        $response = $client->request('POST', '/siteverify', [
+           'form_params' => [
+                'secret' => $this->data['secret'],
+                'response' => $this->data['response']
+           ]
+        ]);
 
-        $verify = curl_init();
-        curl_setopt($verify, CURLOPT_URL, "https://hcaptcha.com/siteverify");
-        curl_setopt($verify, CURLOPT_POST, true);
-        curl_setopt($verify, CURLOPT_POSTFIELDS, http_build_query($this->data));
-        curl_setopt($verify, CURLOPT_RETURNTRANSFER, true);
-        $response = curl_exec($verify);
-        curl_close($verify);
-
-        if(!$response) {
-            self::$logger->error("Could not get response from hcaptcha server");
-        }
-        else {
-            $responseData = json_decode($response);
+        if ($response->getBody()) {
+            $responseData = json_decode($response->getBody());
             if($responseData->success) {
                 return true;
             }
+            else if ($responseData->errorCodes) {
+                foreach($responseData->errorCodes as $error) {
+                    self::$logger->info($error);
+                }
+            }
         }
+        else {
+            self::$logger->error("Could not get response from hcaptcha server");
+        }
+
         return false;
     }
 
