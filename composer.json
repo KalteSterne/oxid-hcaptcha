@@ -13,8 +13,6 @@
     ],
     "require": {
         "php": "^7.0 || ^8.0",
-        "lib-curl": ">=7.26.0",
-        "ext-curl": "*",
         "ext-json": "*"
     },
     "extra": {
