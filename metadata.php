@@ -95,6 +95,12 @@ $aModule = [
             'constraints' => 'normal|compact|invisible'
         ],
         [
+            'group' => 'tremendo_hcaptcha_appearance',
+            'name' => 'tremendo_hcaptcha_privacy_terms',
+            'type' => 'bool',
+            'value' => 'true'
+        ],
+        [
             'group' => 'tremendo_hcaptcha_callbacks',
             'name' => 'tremendo_hcaptcha_callback_success',
             'type' => 'bool',

@@ -18,6 +18,7 @@
       'SHOP_MODULE_tremendo_hcaptcha_size_normal' => 'normal',
       'SHOP_MODULE_tremendo_hcaptcha_size_compact' => 'kompakt',
       'SHOP_MODULE_tremendo_hcaptcha_size_invisible' => 'unsichtbar',
+      'SHOP_MODULE_tremendo_hcaptcha_privacy_terms' => 'Bei unsichtbarem Widget Links zur Datenschutzerkärung und den AGB von hCaptcha anzeigen (empfohlen)',
       'SHOP_MODULE_GROUP_tremendo_hcaptcha_callbacks' => 'Eigene Callbacks verwenden (nähehre Informationen dazu finden Sie in der Dokumentation)',
       'SHOP_MODULE_tremendo_hcaptcha_callback_success' => 'success',
       'SHOP_MODULE_tremendo_hcaptcha_callback_error' => 'error',

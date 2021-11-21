@@ -4,8 +4,8 @@
 
 Stop more bots. Start protecting user privacy. This module adds [hCaptcha](https://www.hcaptcha.com) to forms in OXID eShop.
 #  Requirements
-- OXID >= 6
-- PHP >= 7.0
+- OXID: ^6
+- PHP: ^7.0 || ^8.0
 
 # Installation
 To install the module run the following command from the root directory of your OXID installation.
@@ -27,12 +27,19 @@ If you want to use a specific language for the widget, you can enter a [language
 ### Google reCaptcha compatibility
 Whether or not to insert window.grecaptcha compatibility hook.
 ## Appearance
-Choose the widget's theme (light or dark) and display mode (normal, compact or invisible) here.
+### Theme
+Choose the widget's theme (light or dark).
+### Display Mode
+Choose the widget's display mode (normal, compact or invisible) here. 
+
+If you use the invisible mode hCaptcha client/server interactions occur in the background, and the user will only be presented with a hCaptcha challenge if that user meets challenge criteria.
+### Links to hCaptcha's privacy policy and TOS
+Check this option to include links to hCaptcha's privacy policy and terms of service if the widget is in invisible mode. Recommended.
 ## Callbacks
-If you want to use your own handlers for the events the widgets fires, you can activate them here.
+If you want to use your own event handlers for the widget, you can activate them here.
 
 *Before* you do this please make a copy of the file ```src/js/hcaptcha_callbacks.dist.js``` and rename 
-it to ```hcaptchta_callbacks.js``` so future updates of this module will not override your changes.
+it to ```hcaptchta_callbacks.js``` so the module can find it and future updates will not override your changes.
 # Content-Security-Policy Settings
 If you use CSP add ```https://hcaptcha.com``` and ```https://*.hcaptcha.com``` to ```script-src```, ```frame-src```, ```style-src``` and ```connect-src```.
 # License
