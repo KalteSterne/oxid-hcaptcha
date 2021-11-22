@@ -2,7 +2,6 @@
     "name": "tremendo/oxid-hcaptcha",
     "description": "hCaptcha module for OXID eShop",
     "type": "oxideshop-module",
-    "version": "0.2",
     "keywords": ["oxid", "modules", "hcaptcha"],
     "license": ["MIT"],
     "authors": [

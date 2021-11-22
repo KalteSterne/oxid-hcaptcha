@@ -14,7 +14,7 @@ $aModule = [
         'en' => 'Stop more bots. Start protecting user privacy. A replacment for reCAPTCHA.'
     ],
     'thumbnail'    => 'logo.png',
-    'version'      => '0.2',
+    'version'      => '1.0.1',
     'author'       => 'Jan Loeper',
     'email'        => 'kalte_sterne@arcor.de',
     'url'          => 'https://github.com/KalteSterne/oxid-hcaptcha',
