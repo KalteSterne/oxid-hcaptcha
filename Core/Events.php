@@ -27,18 +27,14 @@ class Events {
         self::clearCache();
     }
 
-    private static function clearCache() {
-        $utilsView = Registry::get('oxUtilsView');
-        $smartyDir = $utilsView->getSmartyDir();
-
-        if ($smartyDir && is_readable($smartyDir)) {
-            foreach (glob($smartyDir . '*') as $file) {
-                if (!is_dir($file)) {
-                    @unlink($file);
-                }
+    private static function clearCache() : void {
+        $clearDir = glob('../tmp/*');
+        $clearDir = array_merge( $clearDir, glob('../tmp/smarty/*') );
+        foreach($clearDir as $file) {
+            if(!is_dir($file)) {
+                @unlink($file);
             }
         }
-
-        $oUtilsView->getSmarty(true);
     }
+
 }

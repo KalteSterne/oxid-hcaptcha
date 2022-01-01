@@ -138,8 +138,8 @@ $aModule = [
         ],
     ],
     'events' => [
-        'onActivate' => '\Tremendo\Hcaptcha\Core\Events::onActivate()',
-        'onDeactivate' => '\Tremendo\Hcaptcha\Core\Events::onDeactivate()' 
+        'onActivate' => '\Tremendo\Hcaptcha\Core\Events::onActivate',
+        'onDeactivate' => '\Tremendo\Hcaptcha\Core\Events::onDeactivate' 
     ],
     'controllers'  => [
 
